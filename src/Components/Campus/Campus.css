@@ -1,0 +1,37 @@
+.campus{
+    margin: 80px auto;
+    width:90%;
+    text-align:center
+}
+h1{
+    text-align: center;
+    padding-top:70px;
+}
+h3{
+    text-align: center;
+    color:#212EA0;
+    margin-bottom: 60px;
+}
+.gallery {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:60px;
+
+}
+.gallery img{
+    width:28%;
+    border-radius: 10px;
+    
+}
+@media(max-width:800px)
+{
+    .gallery{
+        flex-wrap:wrap;
+
+    }
+    .gallery img{
+        width:48%;
+        margin-bottom: 25px;
+    }
+}

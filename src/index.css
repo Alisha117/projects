@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Outfit", sans-serif;
+}
+
+body{
+    background:#F5f5f5;
+
+}
+a{
+    text-decoration:none;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
+
+}
+.container{
+    padding-left:10%;
+    padding-right: 10%;
+    
+}
+.btn{
+    background: #FFF;
+    color:#212121;
+    padding:14px 25px;
+    font-size:16px;
+    border-radius: 30px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn img{
+    margin-left :10px;
+    width:25px; 
+    height:15px; 
+}
+
+& .dark-btn
+{
+    background: #212EA0 ;
+    color :#fff ;
+}
+ .title{
+    text-align: center;
+    color: #212EA0;
+    font-size: 15px;
+    font-weight:600px;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+}
+.title h2{
+    font-size:32px;
+    color:#000F38;
+    margin-top:5px;
+    text-transform:none;
+}
+
+@media(max-width:1200px){
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+
+         }
+
+
+    .btn{
+    padding: 14px 22px;
+        }
+
+}  

@@ -1,0 +1,445 @@
+
+/* =========================================
+   TESTIMONIAL SECTION
+========================================= */
+
+.testimonials {
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.testimonial-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-heading p {
+    color: #212ea0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+}
+
+.testimonial-heading h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+    color: #111;
+}
+
+.testimonial-heading span {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SLIDER WRAPPER
+========================================= */
+
+.testimonial-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   SLIDER WINDOW
+========================================= */
+
+.testimonial-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SLIDER TRACK
+========================================= */
+
+.testimonial-track {
+    width: 200%;
+
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* =========================================
+   EACH CARD
+========================================= */
+
+.testimonial-card {
+    width: 25%;
+    flex-shrink: 0;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CARD DESIGN
+========================================= */
+
+.card-inner {
+    height: 100%;
+
+    min-height: 280px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.card-inner:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   USER INFO
+========================================= */
+
+.user-info {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #eef0ff;
+}
+
+.user-info h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    color: #222;
+}
+
+.user-info span {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote {
+    position: absolute;
+
+    right: 25px;
+    top: 15px;
+
+    font-size: 75px;
+
+    line-height: 1;
+
+    font-family: Georgia, serif;
+
+    color: #eef0ff;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TESTIMONIAL TEXT
+========================================= */
+
+.card-inner p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    color: #f5b400;
+}
+
+
+/* =========================================
+   PREV / NEXT BUTTONS
+========================================= */
+
+.testimonial-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.testimonial-btn:hover:not(:disabled) {
+    transform: translateY(-50%) scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-btn:active:not(:disabled) {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.testimonial-btn img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   PREVIOUS
+========================================= */
+
+.prev-btn {
+    left: -20px;
+}
+
+
+/* =========================================
+   NEXT
+========================================= */
+
+.next-btn {
+    right: -20px;
+}
+
+
+/* =========================================
+   DISABLED BUTTON
+========================================= */
+
+.testimonial-btn:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   DOTS
+========================================= */
+
+.testimonial-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 35px;
+}
+
+.testimonial-dots span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #d5d5d5;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.testimonial-dots span.active {
+    width: 25px;
+
+    border-radius: 10px;
+
+    background: #212ea0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .testimonial-wrapper {
+        width: 88%;
+    }
+
+    .testimonial-heading h1 {
+        font-size: 34px;
+    }
+
+    .testimonial-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .prev-btn {
+        left: -22px;
+    }
+
+    .next-btn {
+        right: -22px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    .testimonial-heading {
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .testimonial-heading h1 {
+        font-size: 28px;
+    }
+
+    .testimonial-heading span {
+        font-size: 14px;
+    }
+
+    /*
+       On mobile we show ONE card.
+    */
+
+    .testimonial-track {
+        width: 400%;
+    }
+
+    .testimonial-card {
+        width: 25%;
+        padding: 10px;
+    }
+
+    .card-inner {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .testimonial-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .prev-btn {
+        left: -12px;
+    }
+
+    .next-btn {
+        right: -12px;
+    }
+
+}
