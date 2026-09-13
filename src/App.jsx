@@ -1,61 +1,26 @@
-import {createBrowserRouter,RouterProvider} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Layout from "./Components/Layout";
-import About from "./Components/About/About";
-import Campus from "./Components/Campus/Campus";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-import Hero from "./Components/Hero/Hero";
-import Navbar from "./Components/Navbar/Navbar";
-import Programs from "./Components/Programs/Programs";
-import Testimonials from "./Components/Testimonials/Testimonials";
-import Title from "./Components/Title/Title";
-import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
+import About from "./components/about/About";
+import Campus from "./components/campus/Campus";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Programs from "./components/programs/Programs";
+import Testimonials from "./components/testimonials/Testimonials";
+import Title from "./components/title/Title";
+import VideoPlayer from "./components/videoPlayer/VideoPlayer";
 import { useState } from "react";
 
 
 function App() {
     
-  
-          const [ playState , setPlayState ] = useState(false);
-          const router = createBrowserRouter([
-         {
-		path: '/',
-		element: <Layout/>,
-		children: [
- {  
-          path:'/',
-          element:<Hero/>
-          },
-          {
-          path:'/program',
-          element:<Programs/>
-          },
-          {
-          path:'/about' ,
-          element:<About/>
-          },
-          {
-          path:'/campus' ,
-          element:<Campus/>
-          },
-          {
-          path:'/testimonials' ,
-          element:<Testimonials/>
-          },
-          {
-          path:'/contact' , 
-          element:<Contact/>
-          }]
-}
-          ])
-
+    const [ playState , setPlayState ] = useState(false);
+         
   return (
    <div>
-       <RouterProvider router={router}/>
-           <Navbar/>
-            <Hero/>
-             <div className="container">
+            <Navbar/>
+            <Outlet/>
+            
                <Title title='OUR PROGRAM' subTitle='What we offer'/>
                <Programs/>
                <About setPlayState={setPlayState}/>
@@ -63,9 +28,7 @@ function App() {
                <Testimonials/>
                <Title title='Contact us' subTitle='Get in Touch'/>
                <Contact/>
-                 
-                <Footer/>
-                </div>
+                 <Footer/>
                   <VideoPlayer playState={playState}  setPlayState={setPlayState}/>
     </div>
      

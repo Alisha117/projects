@@ -24,6 +24,10 @@ nav ul li{
 
 .menu-icon{
     display:none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    
 }
 
 @media (max-width:1000px)

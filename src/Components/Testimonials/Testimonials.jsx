@@ -13,8 +13,7 @@ import stud4 from "../../assets/stud4.jpg";
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 4 cards, 2 cards visible = 2 positions
-  const maxSlide = 1;
+  const maxSlide = 3;
 
   const slideForward = () => {
     setCurrentSlide((prev) => Math.min(prev + 1, maxSlide));
@@ -37,7 +36,6 @@ const Testimonials = () => {
 
       <div className="testimonial-wrapper">
 
-        {/* PREVIOUS BUTTON */}
         <button
           className="testimonial-btn prev-btn"
           onClick={slideBackward}
@@ -53,7 +51,7 @@ const Testimonials = () => {
           <ul
             className="testimonial-track"
             style={{
-              transform: `translateX(-${currentSlide * 50}%)`,
+             transform: `translateX(-${currentSlide * 25}%)`,
             }}
           >
 
@@ -181,7 +179,7 @@ const Testimonials = () => {
           </ul>
         </div>
 
-        {/* NEXT BUTTON */}
+        
         <button
           className="testimonial-btn next-btn"
           onClick={slideForward}
@@ -194,17 +192,27 @@ const Testimonials = () => {
       </div>
 
       {/* DOTS */}
-      <div className="testimonial-dots">
-        <span
-          className={currentSlide === 0 ? "active" : ""}
-          onClick={() => setCurrentSlide(0)}
-        ></span>
+     <div className="testimonial-dots">
+  <span
+    className={currentSlide === 0 ? "active" : ""}
+    onClick={() => setCurrentSlide(0)}
+  ></span>
 
-        <span
-          className={currentSlide === 1 ? "active" : ""}
-          onClick={() => setCurrentSlide(1)}
-        ></span>
-      </div>
+  <span
+    className={currentSlide === 1 ? "active" : ""}
+    onClick={() => setCurrentSlide(1)}
+  ></span>
+
+  <span
+    className={currentSlide === 2 ? "active" : ""}
+    onClick={() => setCurrentSlide(2)}
+  ></span>
+
+  <span
+    className={currentSlide === 3 ? "active" : ""}
+    onClick={() => setCurrentSlide(3)}
+  ></span>
+</div>
 
     </section>
   );

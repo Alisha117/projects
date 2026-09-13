@@ -12,7 +12,7 @@ const Navbar = () => {
         window.scrollY > 50 ? setSticky(true) : setSticky(false);
         })
       },[]);
-        const [mobileMenu,setMobileMenu] = useState(false);
+        const [mobileMenu, setMobileMenu] = useState(false);
         const toggleMenu = () => {
         mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
 

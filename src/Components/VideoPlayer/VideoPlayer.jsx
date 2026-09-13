@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import './VideoPlayer.css'
 import video from '../../assets/video.mp4'
-const VideoPlayer = ({playState,setPlayState}) => {
+const VideoPlayer = ({playState, setPlayState}) => {
 
     const player = useRef(null);
     const closePlayer = (e) =>{
